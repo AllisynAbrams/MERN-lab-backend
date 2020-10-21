@@ -10,20 +10,43 @@ const { Schema } = require('mongoose');
 // create the connection to the db
 const db = mongoose.connection;
 
-// data for first piece of apparel:
+
+
+const initialRooms = [
+	{
+		roomNumber: '1',
+	},
+	{
+		roomNumber: '2',
+	},
+	{
+		roomNumber: '3',
+	},
+];
+
+Dressingrooms.deleteMany({}).then(() => {
+	Dressingrooms.insertMany(initialRooms).then((rooms) => {
+		console.log('rooms - ', rooms);
+		db.close();
+	});
+});
+
+
+
+// // data for first piece of apparel:
 // const myFirstApparel = {
 // 	itemType: 'sweater',
 // 	brand: 'All Saints',
 // 	color: 'grey',
 // };
 
-// create our first dressingroom
+// // create our first dressingroom
 // const myFirstDressingroom = {
 // 	roomNumber: 1,
 //  customerName: 'Allisyn'
 // };
 
-// create our first piece of apparel and first dressing room
+// // create our first piece of apparel and first dressing room
 // Apparel.create(myFirstApparel, (error, apparel) => {
 //     if (error) {
 //         console.log(error)
@@ -41,7 +64,6 @@ const db = mongoose.connection;
 // 	}
 // 	db.close();
 // });
-
 
 
 // Dressingrooms.find({}).deleteMany(() => {
