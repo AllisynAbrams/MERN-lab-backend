@@ -15,16 +15,12 @@ const db = mongoose.connection;
 // 	itemType: 'sweater',
 // 	brand: 'All Saints',
 // 	color: 'grey',
-// 	size: 'xs',
 // };
 
 // create our first dressingroom
 // const myFirstDressingroom = {
 // 	roomNumber: 1,
-//     customerName: 'Allisyn',
-//     items: [
-//         {ref: 'Apparel', type: Schema.Types.}
-//     ]
+//  customerName: 'Allisyn'
 // };
 
 // create our first piece of apparel and first dressing room
@@ -58,16 +54,14 @@ const db = mongoose.connection;
 //         Apparel.create({
 //           itemType: 'sweater',
 //           brand: 'All Saints',
-//           color: 'grey',
-//           size: 'xs',
+//           color: 'grey'
 //         }).then(apparel => {
 //           dressingroom.items.push(apparel)
 //         }),
 //         Apparel.create({
 //           itemType: 'joggers',
 //           brand: 'Splendid',
-//           color: 'black',
-//           size: 'xs',
+//           color: 'black'
 //         }).then(apparel => {
 //           dressingroom.items.push(apparel)
 //         })
