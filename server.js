@@ -13,11 +13,11 @@ const express = require('express')
 const app = express()
 
 // other dependency
-const morgan = require('morgan');
+// const morgan = require('morgan');
 
 // MIDDLEWARE!!!
 NODE_ENV === 'production' ? app.use(cors(corsOptions)) : app.use(cors());
-app.use(morgan('dev')); 
+// app.use(morgan('dev')); 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
